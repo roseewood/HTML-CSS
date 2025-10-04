@@ -21,7 +21,7 @@
   <li><b>Fork</b> this repository to your GitHub account.</li>
 
   <li><b>Clone</b> your fork to your local machine:<br>
-    <pre><code>git clone https://github.com/roseewood/Web-Dev-Mini-Projects.git</code></pre>
+    <pre><code>git clone https://github.com/your-username/Web-Dev-Mini-Projects.git</code></pre>
   </li>
 
   <li>Go inside the project folder:<br>
