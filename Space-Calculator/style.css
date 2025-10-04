@@ -1,0 +1,172 @@
+:root {
+    --primary-glow: #00f2ff;
+    --operator-glow: #ff00c1;
+    --equals-glow: #00ff87;
+    --background-start: #020024;
+    --background-end: #0c0c3a;
+    --panel-bg: rgba(10, 25, 47, 0.65);
+    --text-color: #e6f1ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
+    color: var(--text-color);
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars::before,
+.stars::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    opacity: 0.6;
+}
+
+.stars::before {
+    background-image: radial-gradient(1px 1px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+    background-size: 200px 200px;
+    animation: twinkle 15s linear infinite;
+}
+
+.stars::after {
+    background-image: radial-gradient(1px 1px at 50px 20px, #fff, rgba(0, 0, 0, 0)), radial-gradient(1px 1px at 80px 90px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 120px 140px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 170px 180px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 190px 60px, #ddd, rgba(0, 0, 0, 0));
+    background-size: 300px 300px;
+    animation: twinkle 20s linear infinite;
+}
+
+@keyframes twinkle {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-300px);
+    }
+}
+
+.calculator {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 380px;
+    background: var(--panel-bg);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.15), inset 0 0 5px rgba(0, 242, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-align: right;
+    color: var(--text-color);
+    text-shadow: 0 0 10px var(--primary-glow);
+    caret-color: var(--primary-glow);
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    height: 65px;
+    background: transparent;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 12px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    box-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
+}
+
+.btn:hover {
+    background-color: rgba(0, 242, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    background-color: rgba(0, 242, 255, 0.2);
+}
+
+.operator {
+    color: var(--operator-glow);
+    border-color: rgba(255, 0, 193, 0.3);
+    box-shadow: 0 0 5px rgba(255, 0, 193, 0.2);
+}
+
+.operator:hover {
+    background-color: rgba(255, 0, 193, 0.1);
+    box-shadow: 0 0 15px rgba(255, 0, 193, 0.4);
+}
+
+.operator:active {
+    background-color: rgba(255, 0, 193, 0.2);
+}
+
+.clear-all,
+.delete {
+    font-size: 1.2rem;
+}
+
+.equals {
+    grid-column: span 2;
+    background-color: rgba(0, 255, 135, 0.1);
+    border-color: rgba(0, 255, 135, 0.4);
+    color: var(--equals-glow);
+    font-size: 1.8rem;
+    box-shadow: 0 0 10px rgba(0, 255, 135, 0.3);
+}
+
+.equals:hover {
+    background-color: rgba(0, 255, 135, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 135, 0.5);
+}
+
+.equals:active {
+    background-color: rgba(0, 255, 135, 0.3);
+}
