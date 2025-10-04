@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-wrapper">
+            <header>
+                <h1>My Tasks</h1>
+                <p class="subtitle">Stay organized, stay productive</p>
+            </header>
+
+            <div class="input-section">
+                <input type="text" id="todoInput" placeholder="What needs to be done?" autocomplete="off">
+                <button id="addBtn">
+                    <span>Add Task</span>
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="todoList" class="todo-list"></ul>
+
+            <div class="footer">
+                <span id="taskCount">0 tasks remaining</span>
+                <button id="clearCompleted">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
