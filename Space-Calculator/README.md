@@ -6,6 +6,10 @@ It features an **animated starfield background** and glowing elements inspired b
 
 ---
 
+## Preview
+
+![image](./image.png)
+
 ## ✨ Features  
 - **Futuristic UI**: A glowing, holographic design with custom fonts and neon-inspired colors.  
 - **Animated Background**: A subtle, animated starfield for an immersive space vibe.  
@@ -42,3 +46,4 @@ You can easily tweak the **theme and colors** by editing CSS variables at the to
     --background-end: #0c0c3a;
     /* ... and so on ... */
 }
+
