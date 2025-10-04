@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">GRADIENT GENERATOR</h1>
+        <p class="subtitle">Create CSS gradients the 90s way</p>
+        
+        <div class="gradient-preview" id="gradientPreview">
+            <div class="preview-text">Your Gradient</div>
+        </div>
+        
+        <div class="controls">
+            <div class="color-controls">
+                <div class="color-picker">
+                    <label for="color1">Color 1</label>
+                    <input type="color" id="color1" value="#667eea">
+                    <input type="text" id="color1Text" value="#667eea" readonly>
+                </div>
+                
+                <div class="color-picker">
+                    <label for="color2">Color 2</label>
+                    <input type="color" id="color2" value="#764ba2">
+                    <input type="text" id="color2Text" value="#764ba2" readonly>
+                </div>
+            </div>
+            
+            <div class="direction-control">
+                <label for="direction">Direction</label>
+                <select id="direction">
+                    <option value="to right">Left to Right</option>
+                    <option value="to left">Right to Left</option>
+                    <option value="to bottom">Top to Bottom</option>
+                    <option value="to top">Bottom to Top</option>
+                    <option value="to bottom right" selected>Diagonal ↘</option>
+                    <option value="to bottom left">Diagonal ↙</option>
+                    <option value="to top right">Diagonal ↗</option>
+                    <option value="to top left">Diagonal ↖</option>
+                    <option value="circle">Radial (Circle)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="code-section">
+            <label for="cssCode">CSS Code</label>
+            <div class="code-box">
+                <code id="cssCode">background: linear-gradient(to bottom right, #667eea, #764ba2);</code>
+            </div>
+            <button class="copy-btn" id="copyBtn">
+                <span id="copyText">COPY CSS</span>
+            </button>
+        </div>
+        
+        <div class="random-section">
+            <button class="random-btn" id="randomBtn">RANDOM GRADIENT</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
