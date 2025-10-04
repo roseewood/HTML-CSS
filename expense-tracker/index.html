@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💰 Expense Tracker</h1>
+            <div class="balance">
+                <h2>Total Balance</h2>
+                <div class="balance-amount" id="totalBalance">$0.00</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="input-section">
+                <div class="input-group">
+                    <input type="text" id="description" placeholder="Expense description..." />
+                    <input type="number" id="amount" placeholder="Amount" step="0.01" />
+                    <select id="category">
+                        <option value="food">🍔 Food</option>
+                        <option value="transport">🚗 Transport</option>
+                        <option value="shopping">🛍️ Shopping</option>
+                        <option value="entertainment">🎬 Entertainment</option>
+                        <option value="bills">💡 Bills</option>
+                        <option value="other">📦 Other</option>
+                    </select>
+                </div>
+                <button class="btn-add" onclick="addExpense()">Add Expense</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterExpenses('all')">All</button>
+                <button class="filter-btn" onclick="filterExpenses('food')">🍔 Food</button>
+                <button class="filter-btn" onclick="filterExpenses('transport')">🚗 Transport</button>
+                <button class="filter-btn" onclick="filterExpenses('shopping')">🛍️ Shopping</button>
+                <button class="filter-btn" onclick="filterExpenses('entertainment')">🎬 Entertainment</button>
+                <button class="filter-btn" onclick="filterExpenses('bills')">💡 Bills</button>
+                <button class="filter-btn" onclick="filterExpenses('other')">📦 Other</button>
+            </div>
+
+            <ul class="expenses-list" id="expensesList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
