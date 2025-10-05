@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <h1>Tech Shop</h1>
+        <button class="cart-btn" id="cartToggle">🛒 Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="products" id="products"></section>
+      <div class="overlay" id="overlay"></div>
+      <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+        <h2>Your Cart</h2>
+        <ul id="cartList"></ul>
+        <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+        <button id="checkout">Checkout</button>
+      </aside>
+    </main>
+
+    <template id="productTpl">
+      <article class="card">
+        <div class="card-img-wrapper">
+          <img alt="product image" class="product-img">
+        </div>
+        <div class="card-content">
+          <h3 class="product-title"></h3>
+          <div class="meta">$<span class="product-price"></span></div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
