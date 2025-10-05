@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Quiz Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="quiz-container">
+    <div class="header">
+        <h1>Quiz Game</h1>
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+    <div class="question-container">
+        <p id="question">Question goes here</p>
+        <div id="answer-buttons" class="btn-container"></div>
+    </div>
+    <div class="footer">
+        <div class="timer-container">
+            <div id="timer-bar"></div>
+        </div>
+        <button id="next-btn">Next</button>
+    </div>
+    <div id="score-container" class="score-hide">
+        <h2>Your Score</h2>
+        <p id="score"></p>
+        <button id="restart-btn">Restart</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

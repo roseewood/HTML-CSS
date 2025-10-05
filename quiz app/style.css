@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.quiz-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.header h1 {
+    text-align: center;
+    color: #333;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    transition: width 0.5s ease;
+}
+
+.question-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #6a11cb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+button.correct {
+    background: #28a745;
+}
+
+button.wrong {
+    background: #dc3545;
+}
+
+#next-btn {
+    display: none;
+    margin-top: 20px;
+    background: #ff7e5f;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timer-container {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#timer-bar {
+    height: 100%;
+    width: 100%;
+    background: #ff512f;
+    transition: width 0.1s linear;
+}
+
+.score-hide {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
