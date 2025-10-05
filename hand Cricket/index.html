@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple hand Cricket</title>
+  <link  href="./index.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Hand Cricket</h1>
+  <div class="score">
+    <div><p id="user"></p></div>
+    <div><p id="bot"></p></div>
+  </div>
+  <div class="image-row" id="replace2">
+    <img src="./images/hand0.jpg" alt="Image 1">
+    <div class="image-word">VS</div>
+    <img src="./images/hand0.jpg" alt="Image 2">
+  </div>
+  <div class="person">
+  <div><p style="font-family:papyrus,Georgia, 'Times New Roman', Times, serif;">You🙎🏻‍♂️</p></div>
+  <div><p style="font-family: papyrus,Georgia, 'Times New Roman', Times, serif;;">Bot🤖</p></div> 
+  </div>
+<div id="replace">
+<h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">2 overs , 3 wickets</h2>
+<h3>Toss Time!</h3>
+<button value="1" onclick='toss(this)' style="margin-top: 0px;">Batting</button>
+<p style="margin-top: 0px;margin-bottom: 3px;">or</p>
+<button value="2" onclick="toss(this)" style="margin-top: 0px;">Bowling</button>
+</div>
+  <br>
+
+  <script src="index.js" charset="UTF-8"></script>
+
+</body>
+</html>
