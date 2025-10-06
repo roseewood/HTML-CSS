@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1d1d1d;
+    font-family: Arial, sans-serif;
+    perspective: 1000px;
+  }
+  
+  .gallery {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+  }
+  
+  .image {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(300px);
+    transition: transform 0.5s ease;
+  }
+  
+  .image:hover {
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(300px) scale(1.2);
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
