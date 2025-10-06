@@ -1,0 +1,11 @@
+ /* Custom scrollbar for aesthetics */
+        #taskList::-webkit-scrollbar {
+            width: 8px;
+        }
+        #taskList::-webkit-scrollbar-thumb {
+            background-color: #fca5a5;
+            border-radius: 4px;
+        }
+        #taskList::-webkit-scrollbar-track {
+            background: #f3f4f6;
+        }
