@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <!-- Load Tailwind CSS via CDN (Modern standard for MERN/React) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center font-inter p-4">
+
+    <!-- Main Card Container -->
+    <div class="w-full max-w-lg bg-white rounded-xl shadow-2xl p-6 md:p-8">
+
+        <!-- Header -->
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+            My Focus Tasks
+        </h1>
+
+        <!-- Input Section -->
+        <div class="flex space-x-3 mb-8">
+            <input 
+                type="text" 
+                id="taskInput"
+                placeholder="Add a new task..."
+                class="flex-grow p-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-red-400 transition duration-150"
+            >
+            <button 
+                id="addTaskButton"
+                class="flex-shrink-0 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-5 rounded-lg shadow-md transition duration-150 ease-in-out transform hover:scale-105 active:scale-95"
+            >
+                Add
+            </button>
+        </div>
+
+        <!-- Task List Container -->
+        <div class="max-h-96 overflow-y-auto" id="taskListContainer">
+            <ul id="taskList" class="space-y-3">
+                
+                <li class="task-item flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow-sm border-l-4 border-red-500 hover:shadow-md transition">
+                    <span class="text-gray-700 font-medium">Complete DSA Recursion Logic</span>
+                   
+                                    <button class="delete-button text-gray-400 hover:text-red-500 transition duration-150 p-1 rounded-full hover:bg-red-50">
+                                         
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </li>
+             
+                <li class="task-item completed flex justify-between items-center bg-green-50 p-4 rounded-lg shadow-sm border-l-4 border-green-500 line-through opacity-70 transition">
+                    <span class="text-gray-500 font-medium">Send Email to HR (Done)</span>
+                    <button class="delete-button text-gray-400 hover:text-red-500 transition duration-150 p-1 rounded-full hover:bg-red-50">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+        
+    </div>
+
+ 
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
