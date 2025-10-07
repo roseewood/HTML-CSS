@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Tip calculator app - Day 24</title>
+  </head>
+  <body>
+    <main>
+      <div class="text-center logo">
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+      <div class="container">
+      <div class="card-wrapper p-4 bg-white border-radius-md">
+        <div class="border-radius-md pr-4  w-full">
+          <div class="card">
+            <div class="input">
+              <label class="mt-2" for="bill">Bill</label>
+              <input id="bill" name="bill" class="w-full mt-2 border-none input-control" type="text" placeholder="0" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                <path
+                  d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"
+                />
+              </svg>
+            </div>
+            <div class="input">
+              <label for="">Select Tip %</label>
+              <div class="flex mt-2 w-full">
+                <div class="grid grid-column w-full">
+                  <button id="5%" class=" border-none border-radius-sm bg-cyan-500 text-white p-2">5%</button>
+                  <button id="10%" class="border-none border-radius-sm bg-cyan-500 text-white p-2">10%</button>
+                  <button id="15%" class="border-none border-radius-sm bg-cyan-500 text-white p-2">15%</button>
+                  <button id="25%" class="border-none border-radius-sm bg-cyan-500 text-white p-2">25%</button>
+                  <button id="50%" class="border-none border-radius-sm bg-cyan-500 text-white p-2">50%</button>
+                  <input id="custom" name="custom" type="text" class=" border-radius-sm input-custom " placeholder="Custom">
+                </div>
+              </div>
+            </div>
+            <div class="input mt-2">
+              <div class="flex space-beetwen">
+                <label for="people">Number of People</label>
+              <label for="" class="alert">Can't be zero</label>
+              </div>
+              <input  class="w-full mt-2 border-none input-control" type="text" name="people" id="people" placeholder="0" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-right w-full">
+          <div class="card bg-cyan-500 p-4 border-radius">
+            <div class="flex space-beetwen mb-4 mt-2">
+              <div>
+                <span class="text-white flex">Tip Amount</span>
+                <span class="text-cyan-200">/ person</span>
+              </div>
+              <div>
+                <h1 id="tip-amount" class="text-cyan">$0.00</h1>
+              </div>
+            </div>
+            <div class="flex space-beetwen mb-4">
+              <div>
+                <span class="text-white flex">Total</span>
+                <span>/ person</span>
+              </div>
+              <div>
+                <h1 id="total" class="text-cyan">$0.00</h1>
+              </div>
+            </div>
+            <button id="btn-reset" class="w-full position-bottom p-2 border-radius-sm border-none btn-reset">RESET</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+      <script src="script.js"></script>
+  </body>
+</html>
