@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <title>CricQuiz</title>
+</head>
+
+<body class="p-0 mx-auto text-xs md:text-2xl flex justify-center items-center h-screen">
+    <div class="w-6/12  p-6 m-0 container flex flex-col justify-center items-center bg-white rounded-xl shadow-2xl">
+        <div class="title text-4xl text-sky-600/100">CricQuiz
+            <span class="material-symbols-outlined">
+                sports_cricket
+            </span></div>
+
+        <div id="question-container" class="hide">
+            <div id="question" class="mt-4 mb-4">Question</div>
+            <div id="answer-buttons" class="btn-grid grid grid-cols-2 gap-6">
+                <button class="btn" id="btn">Answer1</button>
+                <button class="btn" id="btn">Answer 2</button>
+                <button class="btn" id="btn">Answer 3</button>
+                <button class="btn" id="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="score-btn" class="score-btn btn hide">Next</button>
+        </div>
+    </div>
+    </div>
+    <link rel="stylesheet" href="jstyle.css">
+</body>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
