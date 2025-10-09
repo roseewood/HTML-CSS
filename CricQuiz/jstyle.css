@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Poppins:wght@400;500&family=Special+Elite&display=swap');
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+body {
+    background-color: hsl(240, 50%, 40%);
+
+}
+
+.btn {
+    background-color: hsl(203, 100%, 50%);
+    border: 3px solid hsl(240, 50%, 40%);
+    border-radius: 5px;
+    padding: 7px 20px;
+    margin: 10px;
+    color: white;
+    outline: none;
+    /* font-size: 1.5rem; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body.wrong {
+    background-color: rgb(244, 48, 48);
+}
+
+body.correct {
+    background-color: rgb(68, 244, 68);
+}
+
+.btn:hover {
+    border: 3px solid black;
+}
+
+.btn.wrong {
+    background-color: rgb(244, 48, 48);
+}
+
+.btn.correct {
+    background-color: rgb(68, 244, 68);
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width:495px) {
+    .container {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 4px 16px;
+    }
+
+    #question {
+        padding: 10px 0 20px 0;
+        font-size: 14px;
+    }
+}
