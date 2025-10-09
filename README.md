@@ -4,7 +4,20 @@
   A collection of small yet creative web projects for beginners who want to learn and explore web technologies.  
 </p>
 
-<hr>
+
+
+<h2>💻 Technologies Used</h2>
+
+<div align="center">
+
+![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
+![JAVASCRIPT](https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black)
+
+
+</div>
+
+
 
 <h2>📘 About This Repository</h2>
 <p>
@@ -57,9 +70,16 @@ git commit -m "Added my awesome mini project 🚀"</code></pre>
   Congrats 🎊 You’ve made a mark in the open-source world!
 </p>
 
+ <h2>Contributors👩‍💻👨‍💻 :</h2>
+
+<a href="https://github.com/roseewood/Web-Dev-Mini-Projects/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=roseewood/Web-Dev-Mini-Projects" />
+</a>
+
 <hr>
 
 <h2>🌍 Open Source Involvement</h2>
+<img src="Image/Hacktoberfest2025.jpg" alt="" width="">
 <p>
   This project proudly participates in community-driven open-source initiatives.  
   It’s all about <b>learning, sharing, and growing together</b>. 💡
