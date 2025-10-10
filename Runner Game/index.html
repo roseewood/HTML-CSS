@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runner Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏃 Runner Game</h1>
+        <div class="game-info">
+            <div class="score-container">
+                <span class="label">Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="high-score-container">
+                <span class="label">High Score:</span>
+                <span id="highScore">0</span>
+            </div>
+        </div>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="instructions">
+                <h3>Controls:</h3>
+                <p>🎮 Press <kbd>SPACE</kbd> or <kbd>↑</kbd> to jump</p>
+                <p>📱 Or click/tap anywhere on the game</p>
+            </div>
+            <button id="startBtn" class="btn btn-primary">Start Game</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
