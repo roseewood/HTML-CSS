@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.password-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.password-box input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  width: 80%;
+  outline: none;
+}
+
+.copy-btn {
+  cursor: pointer;
+  background: #ff8a65;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #ff7043;
+}
+
+.options {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.generate-btn {
+  background: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  background: #43a047;
+}
+
+.footer {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
