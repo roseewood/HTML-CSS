@@ -1,0 +1,77 @@
+ :root {
+     --color-primary: #db34b7;
+     --color-secondary: #2c3e50;
+     --color-background: #070707;
+     --color-canvas-bg: #ffffff;
+ }
+
+ body,
+ html {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Inter', sans-serif;
+     background-color: var(--color-background);
+     color: var(--color-secondary);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+ }
+
+ .container {
+     text-align: center;
+     padding: 2rem;
+     border-radius: 1rem;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     background-color: var(--color-canvas-bg);
+     max-width: 90%;
+ }
+
+ h1 {
+     color: var(--color-primary);
+     margin-bottom: 1.5rem;
+ }
+
+ canvas {
+     border: 2px solid var(--color-secondary);
+     background-color: var(--color-canvas-bg);
+     border-radius: 0.5rem;
+     cursor: crosshair;
+     touch-action: none;
+ }
+
+ .controls {
+     margin-top: 1rem;
+ }
+
+ .controls-button {
+     padding: 0.8rem 1.5rem;
+     font-size: 1rem;
+     font-weight: 700;
+     background-color: var(--color-primary);
+     color: white;
+     border: none;
+     border-radius: 0.5rem;
+     cursor: pointer;
+     transition: background-color 0.2s ease;
+ }
+
+ .controls-button:hover {
+     background-color: #29b959;
+ }
+
+ #colorPalette {
+     display: flex;
+     gap: 5px;
+ }
+
+ #toolbar {
+     margin-bottom: 10px;
+     padding: 10px;
+     border: 1px solid #911616;
+     border-radius: 5px;
+     display: flex;
+     gap: 15px;
+     align-items: center;
+ }
